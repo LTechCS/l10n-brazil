@@ -10,8 +10,7 @@ from openerp.exceptions import UserError, ValidationError
 class TestPaymentOrder(TransactionCase):
 
     def setUp(self):
-        super(TestPaymentOrder, self).setUp()
-
+        super().setUp()
         # Get Invoice for test
         self.invoice_customer_original = self.env.ref(
             'l10n_br_account_payment_order.demo_invoice_payment_order'
@@ -19,7 +18,7 @@ class TestPaymentOrder(TransactionCase):
 
         # Payment Mode
         self.payment_mode = self.env.ref(
-            'account_payment_mode.payment_mode_inbound_ct1'
+            'l10n_br_account_payment_order.main_company_payment_mode_boleto'
         )
 
         self.env['account.payment.order'].search([])
@@ -74,7 +73,7 @@ class TestPaymentOrder(TransactionCase):
             test_balance_value = line.get_balance()
 
         self.assertEquals(
-            test_balance_value, 300.0,
+            test_balance_value, 700.0,
             "Error with method get_balance()")
 
     def test_cancel_payment_order(self):
@@ -104,7 +103,7 @@ class TestPaymentOrder(TransactionCase):
             )
             test_amount_interest = line.amount_interest
         self.assertEquals(
-            test_amount_interest, 4.5,
+            test_amount_interest, 10.5,
             "Error with compute field amount_interest.")
 
         # Open payment order
@@ -133,7 +132,6 @@ class TestPaymentOrder(TransactionCase):
 
     def test_bra_number_constrains(self):
         """ Test bra_number constrains. """
-
         self.banco_bradesco = self.env[
             'res.bank'].search([('code_bc', '=', '033')])
         with self.assertRaises(ValidationError):

@@ -15,9 +15,6 @@ class TestUi(odoo.tests.HttpCase):
         )
         # check result
         record = self.env.ref('base.partner_demo_portal')
-        self.assertEqual(record.name, 'KMEE')
-        self.assertEqual(record.legal_name, 'KMEE INFORMATICA LTDA')
-        self.assertEqual(record.cnpj_cpf, '23130935000198')
         self.assertEqual(record.country_id.code, 'BR')
         self.assertEqual(record.state_id.code, 'MG')
         self.assertEqual(record.city_id.ibge_code, '32404')

@@ -7,22 +7,20 @@ msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-05-23 01:40+0000\n"
-"PO-Revision-Date: 2019-09-03 15:23+0000\n"
-"Last-Translator: Rodrigo Macedo <rmsolucoeseminformatic4@gmail.com>\n"
+"PO-Revision-Date: 2020-07-08 17:19+0000\n"
+"Last-Translator: Maurício Liell <mauricio@liell.com.br>\n"
 "Language-Team: \n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.8\n"
+"X-Generator: Weblate 3.10\n"
 
 #. module: l10n_br_base
 #: model:ir.model.fields,field_description:l10n_br_base.field_res_city__anp_code
-#, fuzzy
-#| msgid "BC Code"
 msgid "ANP Code"
-msgstr "Código do BC"
+msgstr "Código ANP"
 
 #. module: l10n_br_base
 #: model:res.city,name:l10n_br_base.city_5200050
@@ -2243,7 +2241,13 @@ msgstr ""
 #. module: l10n_br_base
 #: model:ir.model,name:l10n_br_base.model_res_bank
 msgid "Bank"
-msgstr ""
+msgstr "Banco"
+
+#. module: l10n_br_base
+#: model:ir.model.fields,field_description:l10n_br_base.field_account_setup_bank_manual_config__bank_account_type
+#: model:ir.model.fields,field_description:l10n_br_base.field_res_partner_bank__bank_account_type
+msgid "Bank Account Type"
+msgstr "Tipo de conta bancária"
 
 #. module: l10n_br_base
 #: model:ir.model,name:l10n_br_base.model_res_partner_bank
@@ -2261,6 +2265,12 @@ msgstr "Número da Agência"
 #: model:ir.model.fields,field_description:l10n_br_base.field_res_partner_bank__bra_number_dig
 msgid "Bank Branch Digit"
 msgstr "Dígito da Agência Bancária"
+
+#. module: l10n_br_base
+#: code:addons/l10n_br_base/models/res_partner_bank.py:64
+#, python-format
+msgid "Bank branch code must be four caracteres."
+msgstr "O código da agência bancária deve ter quatro caracteres."
 
 #. module: l10n_br_base
 #: model:res.city,name:l10n_br_base.city_1501253
@@ -3527,12 +3537,13 @@ msgstr ""
 #. module: l10n_br_base
 #: model:ir.model.fields,field_description:l10n_br_base.field_res_bank__code_bc
 msgid "Brazilian Bank Code"
-msgstr ""
+msgstr "Código Bancário Brasileiro"
 
 #. module: l10n_br_base
 #: model:ir.model.fields,help:l10n_br_base.field_res_bank__code_bc
 msgid "Brazilian Bank Code ex.: 001 is the code of Banco do Brasil"
 msgstr ""
+"Exemplo de Código Bancário Brasileiro: 001 é o código do Banco do Brasil"
 
 #. module: l10n_br_base
 #: model_terms:ir.ui.view,arch_db:l10n_br_base.l10n_br_base_res_config_settings_form
@@ -3861,6 +3872,11 @@ msgstr "CNPJ/CPF"
 #: model_terms:ir.ui.view,arch_db:l10n_br_base.l10n_br_base_partner_form
 msgid "CNPJ/Vat Number"
 msgstr "CNPJ/Id Estrangeiro"
+
+#. module: l10n_br_base
+#: model:ir.model.fields,field_description:l10n_br_base.field_res_bank__compe_member
+msgid "COMPE Member"
+msgstr ""
 
 #. module: l10n_br_base
 #: model_terms:ir.ui.view,arch_db:l10n_br_base.l10n_br_base_partner_form
@@ -6539,6 +6555,48 @@ msgid "Constantina"
 msgstr ""
 
 #. module: l10n_br_base
+#: code:addons/l10n_br_base/models/res_partner_bank.py:13
+#: selection:res.partner.bank,bank_account_type:0
+#, python-format
+msgid "Conta corrente conjunta"
+msgstr ""
+
+#. module: l10n_br_base
+#: code:addons/l10n_br_base/models/res_partner_bank.py:10
+#: selection:res.partner.bank,bank_account_type:0
+#, python-format
+msgid "Conta corrente individual"
+msgstr ""
+
+#. module: l10n_br_base
+#: code:addons/l10n_br_base/models/res_partner_bank.py:15
+#: selection:res.partner.bank,bank_account_type:0
+#, python-format
+msgid "Conta depósito judicial/Depósito em consignação conjunta"
+msgstr ""
+
+#. module: l10n_br_base
+#: code:addons/l10n_br_base/models/res_partner_bank.py:12
+#: selection:res.partner.bank,bank_account_type:0
+#, python-format
+msgid "Conta depósito judicial/Depósito em consignação individual"
+msgstr ""
+
+#. module: l10n_br_base
+#: code:addons/l10n_br_base/models/res_partner_bank.py:14
+#: selection:res.partner.bank,bank_account_type:0
+#, python-format
+msgid "Conta poupança conjunta"
+msgstr ""
+
+#. module: l10n_br_base
+#: code:addons/l10n_br_base/models/res_partner_bank.py:11
+#: selection:res.partner.bank,bank_account_type:0
+#, python-format
+msgid "Conta poupança individual"
+msgstr ""
+
+#. module: l10n_br_base
 #: model:ir.model,name:l10n_br_base.model_res_partner
 msgid "Contact"
 msgstr ""
@@ -7447,6 +7505,22 @@ msgid "Davinópolis"
 msgstr ""
 
 #. module: l10n_br_base
+#: model:res.company,overdue_msg:l10n_br_base.empresa_lucro_presumido
+#: model:res.company,overdue_msg:l10n_br_base.empresa_simples_nacional
+msgid ""
+"Dear Sir/Madam,\n"
+"\n"
+"Our records indicate that some payments on your account are still due. "
+"Please find details below.\n"
+"If the amount has already been paid, please disregard this notice. "
+"Otherwise, please forward us the total amount stated below.\n"
+"If you have any queries regarding your account, Please contact us.\n"
+"\n"
+"Thank you in advance for your cooperation.\n"
+"Best Regards,"
+msgstr ""
+
+#. module: l10n_br_base
 #: model:res.city,name:l10n_br_base.city_3121100
 msgid "Delfim Moreira"
 msgstr ""
@@ -7605,6 +7679,18 @@ msgstr ""
 #: model:res.city,name:l10n_br_base.city_2203354
 msgid "Dirceu Arcoverde"
 msgstr ""
+
+#. module: l10n_br_base
+#: model:ir.model.fields,field_description:l10n_br_base.field_res_config_settings__disable_cpf_cnpj_validation
+#: model_terms:ir.ui.view,arch_db:l10n_br_base.l10n_br_base_res_config_settings_form
+msgid "Disable CPF and CNPJ validation"
+msgstr "Desabilitar validação de CPF e CNPJ"
+
+#. module: l10n_br_base
+#: model:ir.model.fields,field_description:l10n_br_base.field_res_config_settings__disable_ie_validation
+#: model_terms:ir.ui.view,arch_db:l10n_br_base.l10n_br_base_res_config_settings_form
+msgid "Disable IE validation"
+msgstr "Desabilitar validação de IE (Inscrição Estadual)"
 
 #. module: l10n_br_base
 #: model:ir.model.fields,field_description:l10n_br_base.field_state_tax_numbers__display_name
@@ -8319,7 +8405,7 @@ msgid "Espírito Santo do Turvo"
 msgstr ""
 
 #. module: l10n_br_base
-#: code:addons/l10n_br_base/models/res_partner.py:178
+#: code:addons/l10n_br_base/models/res_partner.py:189
 #, python-format
 msgid "Estadual Inscription Invalid !"
 msgstr "Inscrição Estadual Inválida !"
@@ -10128,6 +10214,11 @@ msgid "ID"
 msgstr "ID"
 
 #. module: l10n_br_base
+#: model:ir.model.fields,field_description:l10n_br_base.field_res_bank__ispb_number
+msgid "ISPB Number"
+msgstr "Número ISPB"
+
+#. module: l10n_br_base
 #: model:res.city,name:l10n_br_base.city_3519105
 msgid "Iacanga"
 msgstr ""
@@ -10812,7 +10903,7 @@ msgid "Inocência"
 msgstr ""
 
 #. module: l10n_br_base
-#: code:addons/l10n_br_base/models/res_partner.py:193
+#: code:addons/l10n_br_base/models/res_partner.py:204
 #, python-format
 msgid "Invalid State Tax Number!"
 msgstr "Número da Inscrição Estadual Inválida!"
@@ -22426,6 +22517,16 @@ msgid "Selbach"
 msgstr ""
 
 #. module: l10n_br_base
+#: model_terms:ir.ui.view,arch_db:l10n_br_base.l10n_br_base_res_config_settings_form
+msgid "Select to disable CPF and CNPJ validation"
+msgstr "Selecione para desabilitar a validação de CPF e CNPJ"
+
+#. module: l10n_br_base
+#: model_terms:ir.ui.view,arch_db:l10n_br_base.l10n_br_base_res_config_settings_form
+msgid "Select to disable IE validation"
+msgstr "Selecione para desabilitar a validação de IE (Inscrição Estadual)"
+
+#. module: l10n_br_base
 #: model:res.city,name:l10n_br_base.city_5007802
 msgid "Selvíria"
 msgstr ""
@@ -22830,6 +22931,11 @@ msgid "Severínia"
 msgstr ""
 
 #. module: l10n_br_base
+#: model:ir.model.fields,field_description:l10n_br_base.field_res_bank__short_name
+msgid "Short Name"
+msgstr "Nome curto"
+
+#. module: l10n_br_base
 #: model:res.city,name:l10n_br_base.city_4217600
 msgid "Siderópolis"
 msgstr ""
@@ -23064,7 +23170,7 @@ msgid "State Tax Number"
 msgstr "Número da Inscrição Estadual"
 
 #. module: l10n_br_base
-#: code:addons/l10n_br_base/models/res_partner.py:209
+#: code:addons/l10n_br_base/models/res_partner.py:220
 #, python-format
 msgid "State Tax Number already used %s"
 msgstr "Inscrição estadual %s já utilizada"
@@ -25414,7 +25520,7 @@ msgid "Theobroma"
 msgstr ""
 
 #. module: l10n_br_base
-#: code:addons/l10n_br_base/models/res_partner.py:196
+#: code:addons/l10n_br_base/models/res_partner.py:207
 #, python-format
 msgid "There can only be one state tax number per state for each partner!"
 msgstr ""
@@ -27117,7 +27223,7 @@ msgid "Zé Doca"
 msgstr ""
 
 #. module: l10n_br_base
-#: code:addons/l10n_br_base/models/res_partner.py:159
+#: code:addons/l10n_br_base/models/res_partner.py:165
 #, python-format
 msgid "{} Invalid!"
 msgstr "{} Inválido!"

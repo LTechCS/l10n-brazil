@@ -2232,6 +2232,12 @@ msgid "Bank"
 msgstr ""
 
 #. module: l10n_br_base
+#: model:ir.model.fields,field_description:l10n_br_base.field_account_setup_bank_manual_config__bank_account_type
+#: model:ir.model.fields,field_description:l10n_br_base.field_res_partner_bank__bank_account_type
+msgid "Bank Account Type"
+msgstr ""
+
+#. module: l10n_br_base
 #: model:ir.model,name:l10n_br_base.model_res_partner_bank
 msgid "Bank Accounts"
 msgstr ""
@@ -2246,6 +2252,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_br_base.field_account_setup_bank_manual_config__bra_number_dig
 #: model:ir.model.fields,field_description:l10n_br_base.field_res_partner_bank__bra_number_dig
 msgid "Bank Branch Digit"
+msgstr ""
+
+#. module: l10n_br_base
+#: code:addons/l10n_br_base/models/res_partner_bank.py:64
+#, python-format
+msgid "Bank branch code must be four caracteres."
 msgstr ""
 
 #. module: l10n_br_base
@@ -3842,6 +3854,11 @@ msgstr ""
 #. module: l10n_br_base
 #: model_terms:ir.ui.view,arch_db:l10n_br_base.l10n_br_base_partner_form
 msgid "CNPJ/Vat Number"
+msgstr ""
+
+#. module: l10n_br_base
+#: model:ir.model.fields,field_description:l10n_br_base.field_res_bank__compe_member
+msgid "COMPE Member"
 msgstr ""
 
 #. module: l10n_br_base
@@ -6507,6 +6524,48 @@ msgid "Constantina"
 msgstr ""
 
 #. module: l10n_br_base
+#: code:addons/l10n_br_base/models/res_partner_bank.py:13
+#: selection:res.partner.bank,bank_account_type:0
+#, python-format
+msgid "Conta corrente conjunta"
+msgstr ""
+
+#. module: l10n_br_base
+#: code:addons/l10n_br_base/models/res_partner_bank.py:10
+#: selection:res.partner.bank,bank_account_type:0
+#, python-format
+msgid "Conta corrente individual"
+msgstr ""
+
+#. module: l10n_br_base
+#: code:addons/l10n_br_base/models/res_partner_bank.py:15
+#: selection:res.partner.bank,bank_account_type:0
+#, python-format
+msgid "Conta depósito judicial/Depósito em consignação conjunta"
+msgstr ""
+
+#. module: l10n_br_base
+#: code:addons/l10n_br_base/models/res_partner_bank.py:12
+#: selection:res.partner.bank,bank_account_type:0
+#, python-format
+msgid "Conta depósito judicial/Depósito em consignação individual"
+msgstr ""
+
+#. module: l10n_br_base
+#: code:addons/l10n_br_base/models/res_partner_bank.py:14
+#: selection:res.partner.bank,bank_account_type:0
+#, python-format
+msgid "Conta poupança conjunta"
+msgstr ""
+
+#. module: l10n_br_base
+#: code:addons/l10n_br_base/models/res_partner_bank.py:11
+#: selection:res.partner.bank,bank_account_type:0
+#, python-format
+msgid "Conta poupança individual"
+msgstr ""
+
+#. module: l10n_br_base
 #: model:ir.model,name:l10n_br_base.model_res_partner
 msgid "Contact"
 msgstr ""
@@ -7415,6 +7474,19 @@ msgid "Davinópolis"
 msgstr ""
 
 #. module: l10n_br_base
+#: model:res.company,overdue_msg:l10n_br_base.empresa_lucro_presumido
+#: model:res.company,overdue_msg:l10n_br_base.empresa_simples_nacional
+msgid "Dear Sir/Madam,\n"
+"\n"
+"Our records indicate that some payments on your account are still due. Please find details below.\n"
+"If the amount has already been paid, please disregard this notice. Otherwise, please forward us the total amount stated below.\n"
+"If you have any queries regarding your account, Please contact us.\n"
+"\n"
+"Thank you in advance for your cooperation.\n"
+"Best Regards,"
+msgstr ""
+
+#. module: l10n_br_base
 #: model:res.city,name:l10n_br_base.city_3121100
 msgid "Delfim Moreira"
 msgstr ""
@@ -7572,6 +7644,18 @@ msgstr ""
 #. module: l10n_br_base
 #: model:res.city,name:l10n_br_base.city_2203354
 msgid "Dirceu Arcoverde"
+msgstr ""
+
+#. module: l10n_br_base
+#: model:ir.model.fields,field_description:l10n_br_base.field_res_config_settings__disable_cpf_cnpj_validation
+#: model_terms:ir.ui.view,arch_db:l10n_br_base.l10n_br_base_res_config_settings_form
+msgid "Disable CPF and CNPJ validation"
+msgstr ""
+
+#. module: l10n_br_base
+#: model:ir.model.fields,field_description:l10n_br_base.field_res_config_settings__disable_ie_validation
+#: model_terms:ir.ui.view,arch_db:l10n_br_base.l10n_br_base_res_config_settings_form
+msgid "Disable IE validation"
 msgstr ""
 
 #. module: l10n_br_base
@@ -8287,7 +8371,7 @@ msgid "Espírito Santo do Turvo"
 msgstr ""
 
 #. module: l10n_br_base
-#: code:addons/l10n_br_base/models/res_partner.py:178
+#: code:addons/l10n_br_base/models/res_partner.py:189
 #, python-format
 msgid "Estadual Inscription Invalid !"
 msgstr ""
@@ -10092,6 +10176,11 @@ msgid "ID"
 msgstr ""
 
 #. module: l10n_br_base
+#: model:ir.model.fields,field_description:l10n_br_base.field_res_bank__ispb_number
+msgid "ISPB Number"
+msgstr ""
+
+#. module: l10n_br_base
 #: model:res.city,name:l10n_br_base.city_3519105
 msgid "Iacanga"
 msgstr ""
@@ -10776,7 +10865,7 @@ msgid "Inocência"
 msgstr ""
 
 #. module: l10n_br_base
-#: code:addons/l10n_br_base/models/res_partner.py:193
+#: code:addons/l10n_br_base/models/res_partner.py:204
 #, python-format
 msgid "Invalid State Tax Number!"
 msgstr ""
@@ -22374,6 +22463,16 @@ msgid "Selbach"
 msgstr ""
 
 #. module: l10n_br_base
+#: model_terms:ir.ui.view,arch_db:l10n_br_base.l10n_br_base_res_config_settings_form
+msgid "Select to disable CPF and CNPJ validation"
+msgstr ""
+
+#. module: l10n_br_base
+#: model_terms:ir.ui.view,arch_db:l10n_br_base.l10n_br_base_res_config_settings_form
+msgid "Select to disable IE validation"
+msgstr ""
+
+#. module: l10n_br_base
 #: model:res.city,name:l10n_br_base.city_5007802
 msgid "Selvíria"
 msgstr ""
@@ -22776,6 +22875,11 @@ msgid "Severínia"
 msgstr ""
 
 #. module: l10n_br_base
+#: model:ir.model.fields,field_description:l10n_br_base.field_res_bank__short_name
+msgid "Short Name"
+msgstr ""
+
+#. module: l10n_br_base
 #: model:res.city,name:l10n_br_base.city_4217600
 msgid "Siderópolis"
 msgstr ""
@@ -23010,7 +23114,7 @@ msgid "State Tax Number"
 msgstr ""
 
 #. module: l10n_br_base
-#: code:addons/l10n_br_base/models/res_partner.py:209
+#: code:addons/l10n_br_base/models/res_partner.py:220
 #, python-format
 msgid "State Tax Number already used %s"
 msgstr ""
@@ -25358,7 +25462,7 @@ msgid "Theobroma"
 msgstr ""
 
 #. module: l10n_br_base
-#: code:addons/l10n_br_base/models/res_partner.py:196
+#: code:addons/l10n_br_base/models/res_partner.py:207
 #, python-format
 msgid "There can only be one state tax number per state for each partner!"
 msgstr ""
@@ -27052,7 +27156,7 @@ msgid "Zé Doca"
 msgstr ""
 
 #. module: l10n_br_base
-#: code:addons/l10n_br_base/models/res_partner.py:159
+#: code:addons/l10n_br_base/models/res_partner.py:165
 #, python-format
 msgid "{} Invalid!"
 msgstr ""
