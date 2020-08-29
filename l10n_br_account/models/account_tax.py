@@ -71,7 +71,7 @@ class AccountTax(models.Model):
             product=product,
             price_unit=price_unit,
             quantity=quantity,
-            uom_id=product.uom_id,
+            uom_id=product.product_uom.id,
             fiscal_price=fiscal_price or price_unit,
             fiscal_quantity=fiscal_quantity or quantity,
             uot_id=uot or product.uot_id,
